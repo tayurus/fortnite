@@ -1,0 +1,41 @@
+.site-header {
+  background: #272b31;
+  position: fixed;
+  width: 100%;
+
+  &__nav {
+    max-width: 997px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    padding: 20px 30px;
+    transition: background .3s;
+
+    &:hover {
+      background: #446898;
+
+      .site-header__link {
+        color: #514798;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 21px;
+    text-transform: uppercase;
+    color: #99a5bd;
+    transition: color .3s;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+}
