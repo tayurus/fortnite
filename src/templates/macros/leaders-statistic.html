@@ -1,0 +1,37 @@
+{% from "./leaderboard-table.html" import leaderboard_table %}
+
+{% macro leaders_statistic(type, leaders) %}
+
+  <section class="leaders-statistic">
+
+    <div class="leaders-statistic__top">
+
+      <div class="leaders-statistic__top-wrapper">
+        <div class="leaders-statistic__logo {{'leaders-statistic__logo_daily' if type == 'daily' else 'leaders-statistic__logo_weekly'}}"></div>
+        <div>
+          <label class="leaders-statistic__select-label" for="region1">Region</label>
+          <select class="site-select" name="" id='region1'>
+            <option value="">ALL</option>
+            <option value="">Europe</option>
+            <option value="">USA</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="leaders-statistic__middle-wrapper">
+
+      <div class="leaders-statistic__tabs">
+        <div class="leaders-statistic__tab-item leaders-statistic__tab-item_active">ALL</div>
+        <div class="leaders-statistic__tab-item">SOLO</div>
+        <div class="leaders-statistic__tab-item">SQUAD</div>
+        <div class="leaders-statistic__tab-item">DUO</div>
+      </div>
+
+        {{leaderboard_table(leaders)}}
+    </div>
+
+  </section>
+
+{% endmacro %}

@@ -2,9 +2,9 @@
 
 {% from "./templates/macros/site-header.html" import site_header %}
 {% from "./templates/macros/site-footer.html" import site_footer %}
-{% from "./templates/macros/leaderboard-table.html" import leaderboard_table %}
 {% from "./templates/macros/site-steps.html" import site_steps %}
 {% from "./templates/macros/site-socials.html" import site_socials %}
+{% from "./templates/macros/leaders-statistic.html" import leaders_statistic %}
 
 {% block page_title %}
 
@@ -13,15 +13,17 @@
 {% block page_body %}
 
 	{{site_header()}}
+
 	{{site_socials()}}
-	<img src="./images/banner/banner.png" alt="leaderboard" class="banner"/>
+
 	{{site_steps()}}
-	<select class="site-select" name="">
-		<option value="">ALL</option>
-		<option value="">Europe</option>
-		<option value="">USA</option>
-	</select>
-	{{leaderboard_table(leaders)}}
+
+	<img src="./images/banner/banner.png" alt="leaderboard" class="banner"/>
+
+	{{leaders_statistic('daily', leaders)}}
+
+	{{leaders_statistic('', leaders)}}
+
 	{{site_footer()}}
 
 {% endblock %}
