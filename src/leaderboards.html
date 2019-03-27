@@ -1,6 +1,7 @@
 {% extends "./templates/decorators/_base.html"  %}
 
-{% from "./templates/macros/site-header.html" import header %}
+{% from "./templates/macros/site-header.html" import site_header %}
+{% from "./templates/macros/site-footer.html" import site_footer %}
 
 {% block page_title %}
 
@@ -8,6 +9,7 @@
 
 {% block page_body %}
 
-	{{header()}}
+	{{site_header()}}
+	{{site_footer()}}
 
 {% endblock %}
