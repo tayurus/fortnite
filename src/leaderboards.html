@@ -2,6 +2,7 @@
 
 {% from "./templates/macros/site-header.html" import site_header %}
 {% from "./templates/macros/site-footer.html" import site_footer %}
+{% from "./templates/macros/leaderboard-table.html" import leaderboard_table %}
 
 {% block page_title %}
 
@@ -9,7 +10,13 @@
 
 {% block page_body %}
 
-	{{site_header()}}
+	<!-- {{site_header()}} -->
+	<select class="site-select" name="">
+		<option value="">ALL</option>
+		<option value="">Europe</option>
+		<option value="">USA</option>
+	</select>
+	{{leaderboard_table(leaders)}}
 	{{site_footer()}}
 
 {% endblock %}

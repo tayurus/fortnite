@@ -1,0 +1,80 @@
+.leaderboard-table__wrapper {
+  max-width: 1367px;
+  overflow-x:auto;
+}
+
+.leaderboard-table {
+  min-width: 766px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  text-align: left;
+
+  &__header-row {
+    background-image: linear-gradient(to right, #9242ff 0%, #5fc5ff 50%, #9242ff 100%);
+
+    th:first-child {
+      padding-left: 10px;
+    }
+  }
+
+  &__row:nth-child(2){
+
+    td {
+      font-size: 38px;
+
+      @media (max-width:992px) {
+        font-size: 30px;
+      }
+    }
+
+    td:first-child {
+      text-transform: uppercase;
+      font-size: 42px;
+
+      @media (max-width:992px) {
+        font-size: 34px;
+      }
+    }
+
+  }
+
+  &__th {
+    height: 94px;
+    font-family: "Burbank Big Condensed";
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #75f7ff;
+
+    @media (max-width:992px) {
+      font-size: 30px;
+    }
+  }
+
+  &__td {
+    color: #ffffff;
+    font-family: "Burbank Big Condensed";
+    font-size: 29px;
+    font-weight: 700;
+    background: #8b35ff;
+
+    @media (max-width:992px) {
+      font-size: 21px;
+    }
+
+    &_rank {
+      background: #2fe7f8;
+      color: #291c46;
+      text-align: center;
+      text-transform: lowercase;
+      width: 75px;
+    }
+
+    &_player {
+      padding-left: 28px;
+    }
+  }
+
+
+}
