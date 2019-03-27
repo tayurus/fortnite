@@ -1,0 +1,57 @@
+.site-steps {
+  background: #212231;
+
+  &__inner {
+    padding: 18px 15px;
+    max-width: 1325px;
+    display: grid;
+    grid-template-columns: repeat(4,300px);
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 1170px) {
+      padding: 40px;
+      grid-template-columns: repeat(2,300px);
+      grid-gap: 30px;
+    }
+
+    @media (max-width: 560px) {
+      padding: 40px;
+      grid-template-columns: 300px;
+      grid-gap: 30px;
+    }
+  }
+
+  &__item {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    margin-right: 10px;
+  }
+
+  &__text {
+    text-transform: uppercase;
+
+    &_1 {
+      color: #4d5098;
+    }
+
+    &_2 {
+      color: #446898;
+    }
+
+    &_3 {
+      color: #466498;
+    }
+
+    &_4 {
+      color: #524598;
+    }
+  }
+
+}

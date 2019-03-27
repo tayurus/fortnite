@@ -3,6 +3,7 @@
 {% from "./templates/macros/site-header.html" import site_header %}
 {% from "./templates/macros/site-footer.html" import site_footer %}
 {% from "./templates/macros/leaderboard-table.html" import leaderboard_table %}
+{% from "./templates/macros/site-steps.html" import site_steps %}
 
 {% block page_title %}
 
@@ -10,7 +11,8 @@
 
 {% block page_body %}
 
-	<!-- {{site_header()}} -->
+	{{site_header()}}
+	{{site_steps()}}
 	<select class="site-select" name="">
 		<option value="">ALL</option>
 		<option value="">Europe</option>
