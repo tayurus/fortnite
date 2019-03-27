@@ -4,6 +4,7 @@
 {% from "./templates/macros/site-footer.html" import site_footer %}
 {% from "./templates/macros/leaderboard-table.html" import leaderboard_table %}
 {% from "./templates/macros/site-steps.html" import site_steps %}
+{% from "./templates/macros/site-socials.html" import site_socials %}
 
 {% block page_title %}
 
@@ -12,6 +13,7 @@
 {% block page_body %}
 
 	{{site_header()}}
+	{{site_socials()}}
 	{{site_steps()}}
 	<select class="site-select" name="">
 		<option value="">ALL</option>
