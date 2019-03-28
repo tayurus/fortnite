@@ -1,6 +1,9 @@
 {% macro leaderboard_table(leadersData) %}
 
 <div class="leaderboard-table__wrapper">
+
+  {% include './../partials/loader.html' %}
+
   <table class="leaderboard-table">
     <tr class="leaderboard-table__header-row">
       <th class="leaderboard-table__th">RANK</th>
