@@ -1,5 +1,33 @@
+.banner__wrapper {
+  @media (max-width: 767px) {
+    height: 50vh;
+    max-height: 500px;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right, #9e57ff 0%, #2de3fa 100%);
+  }
+}
+
 .banner {
   max-width: 100%;
   display: block;
   width: 100%;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  &__text {
+    width: 90%;
+    display: block;
+    max-width: 1095px;
+    height: 20vw;
+    max-height: 179px;
+    margin: 0 auto;
+    background: url('./../images/banner/text.png') no-repeat center / contain;
+
+    @media (min-width: 767px) {
+      display: none;
+    }
+  }
 }
