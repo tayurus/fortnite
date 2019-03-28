@@ -12,14 +12,24 @@
   }
 
   &__logo {
-    width: 107px;
-    height: 109px;
-    background: url('./../images/site-socials/logo.png') no-repeat center / contain;
+    top: -22px;
+    left: -24px;
+    width: 113px;
+    height: 145px;
+    position: relative;
+    background: url(../images/site-socials/logo.png) no-repeat center / cover;
+
+    @media (max-width:1400px) {
+      left: 0;
+    }
+
   }
 
   &__items {
     display: flex;
     align-items: center;
+    position: relative;
+    top: -15px;
   }
 
   &__item {

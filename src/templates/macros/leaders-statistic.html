@@ -2,7 +2,7 @@
 
 {% macro leaders_statistic(type, leaders) %}
 
-  <section class="leaders-statistic">
+  <section class="leaders-statistic {{'leaders-statistic_bottom-line' if type == 'daily' else ''}}">
 
     <div class="leaders-statistic__top">
 
@@ -30,6 +30,11 @@
       </div>
 
         {{leaderboard_table(leaders)}}
+
+        <div class="leaders-statistic__link-wrapper">
+          <a href="#" class="leaders-statistic__link">view more</a>
+        </div>
+
     </div>
 
   </section>

@@ -16,26 +16,36 @@
     th:first-child {
       padding-left: 10px;
     }
+
   }
 
-  &__row:nth-child(2){
 
-    td {
-      font-size: 38px;
+  &__row{
 
-      @media (max-width:992px) {
-        font-size: 30px;
+    &:hover td {
+      background: tomato;
+    }
+
+    &:nth-child(2) {
+      td {
+        font-size: 38px;
+
+        @media (max-width:992px) {
+          font-size: 30px;
+        }
+      }
+
+      td:first-child {
+        text-transform: uppercase;
+        font-size: 42px;
+
+        @media (max-width:992px) {
+          font-size: 25px;
+        }
       }
     }
 
-    td:first-child {
-      text-transform: uppercase;
-      font-size: 42px;
 
-      @media (max-width:992px) {
-        font-size: 25px;
-      }
-    }
 
   }
 
@@ -47,12 +57,17 @@
     text-transform: uppercase;
     color: #75f7ff;
 
+    &_player {
+      padding-left: 28px;
+    }
+
     @media (max-width:992px) {
       font-size: 30px;
     }
   }
 
   &__td {
+    vertical-align: middle;
     color: #ffffff;
     font-family: "Burbank Big Condensed";
     font-size: 29px;

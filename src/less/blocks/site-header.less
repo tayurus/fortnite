@@ -6,15 +6,22 @@
   z-index: 1;
   text-align: center;
 
+  @media (max-width:767px) {
+    position: static;
+  }
+
   &__burger {
     font-size: 30px;
     color: #fff;
     user-select: none;
     cursor: pointer;
+    text-align: right;
+    padding-right: 20px;
 
     @media (min-width:767px) {
       display: none;
     }
+
   }
 
 
@@ -27,7 +34,7 @@
   }
 
   &__nav {
-    max-width: 997px;
+    max-width: 1061px;
     padding: 0 15px;
     margin: 0 auto;
 
@@ -61,7 +68,7 @@
       background: #446898;
 
       .site-header__link {
-        color: #514798;
+        color: tomato;
       }
     }
   }

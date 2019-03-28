@@ -3,17 +3,18 @@
 
   &__inner {
     padding: 18px 15px;
-    max-width: 1325px;
+    max-width: 1470px;
     display: grid;
     grid-template-columns: repeat(4,300px);
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     @media (max-width: 1170px) {
       padding: 40px;
       grid-template-columns: repeat(2,300px);
       grid-gap: 30px;
+      justify-content: center;
     }
 
     @media (max-width: 560px) {
