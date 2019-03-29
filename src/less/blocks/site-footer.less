@@ -27,6 +27,17 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
+
+    @media (max-width: 560px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    @media (max-width: 560px) {
+      margin: 10px 0;
+    }
   }
 
   &__link {
@@ -40,9 +51,6 @@
       color: tomato;
     }
 
-    @media (max-width: 490px) {
-      font-size: 12px;
-    }
   }
 
   &__secondary {
