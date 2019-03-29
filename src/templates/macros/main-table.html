@@ -1,0 +1,43 @@
+{% macro main_table(data, class='', type) %}
+
+  <section class="main-table">
+    <h2 class="main-table__title">ggChampions Top 10 Weekly Leaderboard</h2>
+
+    <table class="main-table__table">
+      <tr class="main-table__row">
+        <th class="main-table__th">Rank</th>
+        <th class="main-table__th">Country</th>
+        <th class="main-table__th">Name</th>
+        <th class="main-table__th">Center Name</th>
+        <th class="main-table__th">Points</th>
+      </tr>
+
+      <tr class="main-table__row">
+        <td class="main-table__td main-table__td_rank main-table__td_up">1</td>
+        <td class="main-table__td main-table__td_country"></td>
+        <td class="main-table__td main-table__td_name">tayurus</td>
+        <td class="main-table__td main-table__td_name">ROG CAA</td>
+        <td class="main-table__td main-table__td_points">10,735</td>
+      </tr>
+
+      <tr class="main-table__row">
+        <td class="main-table__td main-table__td_rank main-table__td_down">2</td>
+        <td class="main-table__td main-table__td_country"></td>
+        <td class="main-table__td main-table__td_name">msharybb</td>
+        <td class="main-table__td main-table__td_name">Bunker Game Center</td>
+        <td class="main-table__td main-table__td_points">35</td>
+      </tr>
+
+      <tr class="main-table__row">
+        <td class="main-table__td main-table__td_rank main-table__td_equal">3</td>
+        <td class="main-table__td main-table__td_country"></td>
+        <td class="main-table__td main-table__td_name">KLG Horizon</td>
+        <td class="main-table__td main-table__td_name">ROG Las Piñas</td>
+        <td class="main-table__td main-table__td_points">2,735</td>
+      </tr>
+
+    </table>
+
+  </section>
+
+{% endmacro %}
