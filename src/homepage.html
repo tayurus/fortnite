@@ -4,6 +4,7 @@
 {% from "./templates/macros/site-footer.html" import site_footer %}
 {% from "./templates/macros/site-steps.html" import site_steps %}
 {% from "./templates/macros/site-socials.html" import site_socials %}
+{% from "./templates/macros/main-table.html" import main_table %}
 
 {% block page_title %}
 
@@ -11,12 +12,20 @@
 
 {% block page_body %}
 
+<div style='background:#262a30'>
+
 	{{site_header('site-header_tall')}}
 
 	{{site_socials('site-socials_homepage')}}
 
+	{{main_table()}}
+
 	{{site_steps()}}
 
 	{{site_footer()}}
+
+</div>
+
+
 
 {% endblock %}
