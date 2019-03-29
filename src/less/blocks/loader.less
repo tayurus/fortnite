@@ -1,38 +1,46 @@
 .loader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  height: 100%;
-  background-color: #e3e3e3;
+  position: relative !important;
 
-  &__content {
+  &::before {
+    background-color: rgba(70, 72,105, .8) !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    content: attr(data-loading-text);
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: red;
+    font-size: 20px;
+  }
+
+  &:after {
+    content: '';
+    width: 50px;
+    height: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-  }
-
-  &__icon {
-    width: 59px;
-    height: 56px;
-    margin-bottom: 14px;
-    background: url(./../images/loader/icon.png) no-repeat center / contain;
+    border-right: 2px solid #ccc;
+    border-left: 2px solid transparent;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-radius: 100%;
     animation-name: loader__iconAnimation;
-    animation-duration: 1.5s;
-    animation-timing-function: linear;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
 
-  &__text {
-    color: #646464;
-    font-size: 16px;
-  }
 }
 
 @keyframes loader__iconAnimation {
-  100%{
-    transform: rotate(-360deg);
+  100% {
+    transform: translate(-50%,-50%) rotate(360deg);
   }
 }

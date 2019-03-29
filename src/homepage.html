@@ -1,0 +1,22 @@
+{% extends "./templates/decorators/_base.html"  %}
+
+{% from "./templates/macros/site-header.html" import site_header %}
+{% from "./templates/macros/site-footer.html" import site_footer %}
+{% from "./templates/macros/site-steps.html" import site_steps %}
+{% from "./templates/macros/site-socials.html" import site_socials %}
+
+{% block page_title %}
+
+{% endblock %}
+
+{% block page_body %}
+
+	{{site_header()}}
+
+	{{site_socials()}}
+
+	{{site_steps()}}
+
+	{{site_footer()}}
+
+{% endblock %}

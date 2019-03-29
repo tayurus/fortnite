@@ -1,8 +1,6 @@
 {% macro leaderboard_table(leadersData) %}
 
-<div class="leaderboard-table-wrapper">
-
-  {% include './../partials/loader.html' %}
+<div class="leaderboard-table-wrapper loader" data-loading-text='Loading...'>
 
   <table class="leaderboard-table">
     <tr class="leaderboard-table__header-row">
