@@ -1,6 +1,45 @@
 .site-socials {
   height: 105px;
-  background: url('./../images/site-socials/bg.png') no-repeat center / cover;
+  background: url("./../images/site-socials/bg.png") no-repeat center / cover;
+  margin-top: 64px;
+  
+  @media (max-width:992px) {
+    margin-top: 50px;
+  }
+  @media (max-width:767px) {
+    margin-top: 0;
+  }
+
+  &_homepage {
+    margin-top: 120px;
+    background: url("./../images/site-socials/bg2.png") no-repeat center / cover;
+
+    @media (max-width: 992px) {
+      margin-top: 112px;
+    }
+
+    .site-socials__logo {
+      width: 170px;
+      height: 176px;
+      background: url("./../images/site-socials/logo2.png") no-repeat center / contain;
+      top: -100px;
+      left: -60px;
+      position: relative;
+      z-index: 1;
+      transform: scale(1.2);
+      @media (max-width:1450px) {
+        left: 0;
+      }
+      @media (max-width:992px) {
+        transform: none;
+        top: -42px;
+      }
+    }
+
+    .site-socials__items {
+      top: -33px;
+    }
+  }
 
   &__wrapper {
     max-width: 1323px;
@@ -17,12 +56,10 @@
     width: 113px;
     height: 145px;
     position: relative;
-    background: url(../images/site-socials/logo.png) no-repeat center / cover;
-
+    background: url("../images/site-socials/logo.png") no-repeat center / cover;
     @media (max-width:1400px) {
       left: 0;
     }
-
   }
 
   &__items {
@@ -38,15 +75,15 @@
     margin-right: 3px;
 
     &_twitter {
-      background: url('./../images/site-socials/socials.png') no-repeat 0 center / 99px;
+      background: url("./../images/site-socials/socials.png") no-repeat 0 center / 99px;
     }
 
     &_facebook {
-      background: url('./../images/site-socials/socials.png') no-repeat -34px center / 99px;
+      background: url("./../images/site-socials/socials.png") no-repeat -34px center / 99px;
     }
 
     &_googleplus {
-      background: url('./../images/site-socials/socials.png') no-repeat -69px center / 99px;
+      background: url("./../images/site-socials/socials.png") no-repeat -69px center / 99px;
     }
   }
 }

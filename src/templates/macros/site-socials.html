@@ -1,6 +1,6 @@
-{% macro site_socials(type) %}
+{% macro site_socials(class='') %}
 
-  <section class="site-socials">
+  <section class="site-socials {{class if class != ''}}">
 
     <div class="site-socials__wrapper">
       <a href="#" class="site-socials__logo"></a>
