@@ -5,6 +5,7 @@
 {% from "./templates/macros/site-steps.html" import site_steps %}
 {% from "./templates/macros/site-socials.html" import site_socials %}
 {% from "./templates/macros/main-table.html" import main_table %}
+{% from "./templates/macros/players-list.html" import players_list %}
 
 {% block page_title %}
 
@@ -20,6 +21,7 @@
 
 	{{site_steps()}}
 
+	{{players_list(players)}}
 
 	<div class="main-table-wrapper main-table-wrapper_homepage">
 		{{main_table()}}

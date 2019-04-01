@@ -3,25 +3,25 @@
     {
       "placeClass" : "player-card_1",
       "name" : "Froggy648",
-      "gameCenter" : "Bunker <br/> Game <br/> Center",
+      "gameCenter" : "Bunker Game Center",
       "place" : "1",
-      "placeLabel" : "DAILY<br/>FINISH",
+      "placeLabel" : "DAILY FINISH",
       "playerImg" : "./images/player-card/player1.png"
     },
     {
       "placeClass" : "player-card_2",
       "name" : "msharybb",
-      "gameCenter" : "ROG <br/> CAA",
+      "gameCenter" : "ROG CAA",
       "place" : "2",
-      "placeLabel" : "DAILY<br/>FINISH",
+      "placeLabel" : "DAILY FINISH",
       "playerImg" : "./images/player-card/player2.png"
     },
     {
       "placeClass" : "player-card_3",
       "name" : "Player",
-      "gameCenter" : "ROG <br/> Tuktukan",
+      "gameCenter" : "ROG Tuktukan",
       "place" : "3",
-      "placeLabel" : "DAILY<br/>FINISH",
+      "placeLabel" : "DAILY FINISH",
       "playerImg" : "./images/player-card/player3.png"
     }
   ]

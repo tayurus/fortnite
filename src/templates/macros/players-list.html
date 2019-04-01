@@ -1,0 +1,25 @@
+{% from './player-card.html' import player_card %}
+
+{% macro players_list(playersList, class) %}
+
+  <section class="players-list">
+
+
+    <h2 class="players-list__title">
+      <span>MOST DECORATED PLAYERS</span>
+    </h2>
+
+
+    <div class="players-list__items">
+
+      {% for player in playersList %}
+
+        {{player_card(player)}}
+
+      {% endfor %}
+
+    </div>
+
+  </section>
+
+{% endmacro %}
