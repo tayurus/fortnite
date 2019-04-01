@@ -50,8 +50,8 @@
     width: 100%;
     position: relative;
     z-index: 1;
-    padding-bottom: 30px;
     border-collapse: collapse;
+    font-family: "Helvetica Neue";
   }
 
   &__header-row {
@@ -80,7 +80,6 @@
     font-size: 21px;
     font-weight: 700;
     color: #c5d5f6;
-    padding: 0 12px;
   }
 
   &__th-rank {
@@ -101,6 +100,12 @@
 
   &__th-points {
     border: 1px solid #7856b9;
+  }
+
+
+  &__th-players {
+    border: 1px solid #7856b9;
+    padding: 0 7px;
   }
 
   &__td {
@@ -181,6 +186,18 @@
       font-size: 21px;
       font-weight: 500;
       color: #99a5bd;
+    }
+
+    &_points-small {
+      padding: 0 7px;
+    }
+
+    &_players {
+      background: #36324d;
+      font-size: 21px;
+      font-weight: 500;
+      color: #99a5bd;
+      padding-left: 10px;
     }
   }
 }

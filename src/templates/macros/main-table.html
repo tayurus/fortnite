@@ -5,8 +5,6 @@
 
       <div class="main-table__substrate main-table__substrate_purple"></div>
 
-      {% for i in range(0, 2) %}
-
         <div class="main-table_small">
           <h2 class="main-table__title">Weekly Top 10 Centers</h2>
 
@@ -24,28 +22,62 @@
                 <td class="main-table__td main-table__td_rank main-table__td_up">1</td>
                 <td class="main-table__td main-table__td_country flag-icon-gr"></td>
                 <td class="main-table__td main-table__td_name">tayurus</td>
-                <td class="main-table__td main-table__td_points">10,735</td>
+                <td class="main-table__td main-table__td_points main-table__td_points-small">10,735</td>
               </tr>
 
               <tr class="main-table__row">
                 <td class="main-table__td main-table__td_rank main-table__td_down">2</td>
                 <td class="main-table__td main-table__td_country flag-icon-ru"></td>
                 <td class="main-table__td main-table__td_name">msharybb</td>
-                <td class="main-table__td main-table__td_points">35</td>
+                <td class="main-table__td main-table__td_points main-table__td_points-small">35</td>
               </tr>
 
               <tr class="main-table__row">
                 <td class="main-table__td main-table__td_rank main-table__td_equal">3</td>
                 <td class="main-table__td main-table__td_country flag-icon-ua"></td>
                 <td class="main-table__td main-table__td_name">KLG Horizon</td>
-                <td class="main-table__td main-table__td_points">2,735</td>
+                <td class="main-table__td main-table__td_points main-table__td_points-small">2,735</td>
               </tr>
 
             {% endfor %}
           </table>
         </div>
 
-      {% endfor %}
+
+        <div class="main-table_small">
+          <h2 class="main-table__title">Top 10 Most Played Games</h2>
+
+          <table class="main-table__table">
+            <tr class="main-table__header-row">
+              <th class="main-table__th main-table__th-rank">Rank</th>
+              <th class="main-table__th main-table__th-name">Name</th>
+              <th class="main-table__th main-table__th-players">Players</th>
+            </tr>
+
+            {% for i in range(0, 3) %}
+
+              <tr class="main-table__row">
+                <td class="main-table__td main-table__td_rank main-table__td_up">1</td>
+                <td class="main-table__td main-table__td_name">Starcraft 2</td>
+                <td class="main-table__td main-table__td_players">100M</td>
+              </tr>
+
+              <tr class="main-table__row">
+                <td class="main-table__td main-table__td_rank main-table__td_down">2</td>
+                <td class="main-table__td main-table__td_name">Fortnite</td>
+                <td class="main-table__td main-table__td_players">1M</td>
+              </tr>
+
+              <tr class="main-table__row">
+                <td class="main-table__td main-table__td_rank main-table__td_equal">3</td>
+                <td class="main-table__td main-table__td_name">Apex Legends</td>
+                <td class="main-table__td main-table__td_players">5M</td>
+              </tr>
+
+            {% endfor %}
+          </table>
+        </div>
+
 
     </div>
   {% else %}
