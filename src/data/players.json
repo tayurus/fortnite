@@ -1,0 +1,28 @@
+{
+  "players": [
+    {
+      "placeClass" : "player-card_1",
+      "name" : "Froggy648",
+      "gameCenter" : "Bunker <br/> Game <br/> Center",
+      "place" : "1",
+      "placeLabel" : "DAILY<br/>FINISH",
+      "playerImg" : "./images/player-card/player1.png"
+    },
+    {
+      "placeClass" : "player-card_2",
+      "name" : "msharybb",
+      "gameCenter" : "ROG <br/> CAA",
+      "place" : "2",
+      "placeLabel" : "DAILY<br/>FINISH",
+      "playerImg" : "./images/player-card/player2.png"
+    },
+    {
+      "placeClass" : "player-card_3",
+      "name" : "Player",
+      "gameCenter" : "ROG <br/> Tuktukan",
+      "place" : "3",
+      "placeLabel" : "DAILY<br/>FINISH",
+      "playerImg" : "./images/player-card/player3.png"
+    }
+  ]
+}

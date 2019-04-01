@@ -1,0 +1,82 @@
+.player-card {
+  max-width: 429px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  font-family: "Brandon Grotesque";
+
+  &_1 {
+    background-color: #c9812a;
+
+    .player-card__place {
+      background: url('./images/player-card/place1.png') no-repeat center / contain;
+    }
+
+    .player-card__place-label {
+      color: #613815;
+    }
+
+  }
+
+  &_2 {
+    background-color: #64b3c2;
+
+    .player-card__place {
+      background: url('./images/player-card/place2.png') no-repeat center / contain;
+    }
+
+    .player-card__place-label {
+      color: #425461;
+    }
+  }
+
+  &_3 {
+    background-color: #bf7e53;
+
+    .player-card__place {
+      background: url('./images/player-card/place3.png') no-repeat center / contain;
+    }
+
+    .player-card__place-label {
+      color: #614f42;
+    }
+  }
+
+  &__name {
+    font-size: 29px;
+    font-weight: 700;
+    color: #ffff56;
+    margin-bottom: 39px;
+  }
+
+  &__game-center {
+    font-size: 29px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -2.56px;
+    margin-bottom: 20px;
+  }
+
+  &__status {
+    display: flex;
+  }
+
+  &__place {
+    width: 85px;
+    height: 81px;
+  }
+
+  &__place-label {
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: -2.56px;
+  }
+
+  &__image {
+    width: 238px;
+    height: 262px;
+  }
+
+}
