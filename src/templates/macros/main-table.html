@@ -1,45 +1,101 @@
-{% macro main_table(data, class='', type) %}
+{% macro main_table(class='', type='') %}
 
-  <section class="main-table">
-    <h2 class="main-table__title">ggChampions Top 10 Weekly Leaderboard</h2>
+  {% if type == 'double' %}
+    <div class="main-table__tables-row">
 
-    <div class="main-table__substrate"></div>
+      <div class="main-table__substrate main-table__substrate_purple"></div>
 
-    <table class="main-table__table">
-      <tr class="main-table__header-row">
-        <th class="main-table__th">Rank</th>
-        <th class="main-table__th">Country</th>
-        <th class="main-table__th">Name</th>
-        <th class="main-table__th">Center Name</th>
-        <th class="main-table__th">Points</th>
-      </tr>
+      {% for i in range(0, 2) %}
 
-      <tr class="main-table__row">
-        <td class="main-table__td main-table__td_rank main-table__td_up">1</td>
-        <td class="main-table__td main-table__td_country"></td>
-        <td class="main-table__td main-table__td_name">tayurus</td>
-        <td class="main-table__td main-table__td_center-name">ROG CAA</td>
-        <td class="main-table__td main-table__td_points">10,735</td>
-      </tr>
+        <div class="main-table_small">
+          <h2 class="main-table__title">Weekly Top 10 Centers</h2>
 
-      <tr class="main-table__row">
-        <td class="main-table__td main-table__td_rank main-table__td_down">2</td>
-        <td class="main-table__td main-table__td_country"></td>
-        <td class="main-table__td main-table__td_name">msharybb</td>
-        <td class="main-table__td main-table__td_center-name">Bunker Game Center</td>
-        <td class="main-table__td main-table__td_points">35</td>
-      </tr>
+          <table class="main-table__table">
+            <tr class="main-table__header-row">
+              <th class="main-table__th main-table__th-rank">Rank</th>
+              <th class="main-table__th main-table__th-country">Country</th>
+              <th class="main-table__th main-table__th-name">Name</th>
+              <th class="main-table__th main-table__th-points">Points</th>
+            </tr>
 
-      <tr class="main-table__row">
-        <td class="main-table__td main-table__td_rank main-table__td_equal">3</td>
-        <td class="main-table__td main-table__td_country"></td>
-        <td class="main-table__td main-table__td_name">KLG Horizon</td>
-        <td class="main-table__td main-table__td_center-name">ROG Las Piñas</td>
-        <td class="main-table__td main-table__td_points">2,735</td>
-      </tr>
+            {% for i in range(0, 3) %}
 
-    </table>
+              <tr class="main-table__row">
+                <td class="main-table__td main-table__td_rank main-table__td_up">1</td>
+                <td class="main-table__td main-table__td_country flag-icon-gr"></td>
+                <td class="main-table__td main-table__td_name">tayurus</td>
+                <td class="main-table__td main-table__td_points">10,735</td>
+              </tr>
 
-  </section>
+              <tr class="main-table__row">
+                <td class="main-table__td main-table__td_rank main-table__td_down">2</td>
+                <td class="main-table__td main-table__td_country flag-icon-ru"></td>
+                <td class="main-table__td main-table__td_name">msharybb</td>
+                <td class="main-table__td main-table__td_points">35</td>
+              </tr>
+
+              <tr class="main-table__row">
+                <td class="main-table__td main-table__td_rank main-table__td_equal">3</td>
+                <td class="main-table__td main-table__td_country flag-icon-ua"></td>
+                <td class="main-table__td main-table__td_name">KLG Horizon</td>
+                <td class="main-table__td main-table__td_points">2,735</td>
+              </tr>
+
+            {% endfor %}
+          </table>
+        </div>
+
+      {% endfor %}
+
+    </div>
+  {% else %}
+
+    <section class="main-table">
+      <h2 class="main-table__title">ggChampions Top 10 Weekly Leaderboard</h2>
+
+      <div class="main-table__substrate"></div>
+
+      <table class="main-table__table">
+        <tr class="main-table__header-row">
+          <th class="main-table__th main-table__th-rank">Rank</th>
+          <th class="main-table__th main-table__th-country">Country</th>
+          <th class="main-table__th main-table__th-name">Name</th>
+          <th class="main-table__th main-table__th-center-name">Center Name</th>
+          <th class="main-table__th main-table__th-points">Points</th>
+        </tr>
+
+
+        {% for i in range(0, 3) -%}
+
+          <tr class="main-table__row">
+            <td class="main-table__td main-table__td_rank main-table__td_up">1</td>
+            <td class="main-table__td main-table__td_country flag-icon-gr"></td>
+            <td class="main-table__td main-table__td_name">tayurus</td>
+            <td class="main-table__td main-table__td_center-name">ROG CAA</td>
+            <td class="main-table__td main-table__td_points">10,735</td>
+          </tr>
+
+          <tr class="main-table__row">
+            <td class="main-table__td main-table__td_rank main-table__td_down">2</td>
+            <td class="main-table__td main-table__td_country flag-icon-ru"></td>
+            <td class="main-table__td main-table__td_name">msharybb</td>
+            <td class="main-table__td main-table__td_center-name">Bunker Game Center</td>
+            <td class="main-table__td main-table__td_points">35</td>
+          </tr>
+
+          <tr class="main-table__row">
+            <td class="main-table__td main-table__td_rank main-table__td_equal">3</td>
+            <td class="main-table__td main-table__td_country flag-icon-ua"></td>
+            <td class="main-table__td main-table__td_name">KLG Horizon</td>
+            <td class="main-table__td main-table__td_center-name">ROG Las Piñas</td>
+            <td class="main-table__td main-table__td_points">2,735</td>
+          </tr>
+
+        {% endfor %}
+      </table>
+
+    </section>
+
+  {% endif %}
 
 {% endmacro %}

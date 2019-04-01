@@ -2,6 +2,19 @@
   font-family: "Helvetica Neue";
   max-width: 1378px;
   position: relative;
+  padding-bottom: 30px;
+
+  &_small {
+    max-width: 527px;
+    width: 100%;
+  }
+
+  &__tables-row {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding-bottom: 30px;
+  }
 
   &__title {
     font-family: "Brandon Grotesque";
@@ -21,7 +34,14 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    height: ~'calc(100% - 85px)';
+    height: ~'calc(100% - 94px)';
+
+    &_purple {
+      border-top: 2px solid #836ecc;
+      border-right: 2px solid #a187ff;
+      border-bottom: 2px solid #6badce;
+      border-left: 2px solid #8abfff;
+    }
   }
 
   &__table {
@@ -31,6 +51,7 @@
     position: relative;
     z-index: 1;
     padding-bottom: 30px;
+    border-collapse: collapse;
   }
 
   &__header-row {
@@ -45,8 +66,12 @@
     //   left: 0;
     //   width: 100%;
     //   height: 2px;
-    //   background: red;
+    //   background-image: linear-gradient(to left, #9242ff 0%, #5fc5ff 50%, #9242ff 100%);
     // }
+
+    &:last-child .main-table__td {
+      border-bottom: none !important;
+    }
   }
 
   &__th {
@@ -55,11 +80,32 @@
     font-size: 21px;
     font-weight: 700;
     color: #c5d5f6;
-    border: 1px solid rgba(26, 36, 72, 0.5);
+    padding: 0 12px;
+  }
+
+  &__th-rank {
+    border: 1px solid #629dbf;
+  }
+
+  &__th-country {
+    border: 1px solid #5c9bb6;
+  }
+
+  &__th-name {
+    border: 1px solid #5e9dbd;
+  }
+
+  &__th-center-name {
+    border: 1px solid #7856b7;
+  }
+
+  &__th-points {
+    border: 1px solid #7856b9;
   }
 
   &__td {
     height: 55px;
+    border-bottom: 2px solid #6aa9ff;
 
     &_rank {
       background: #413255;
@@ -105,6 +151,9 @@
 
     &_country {
       background: #312e3e;
+      background-size: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     &_name {
