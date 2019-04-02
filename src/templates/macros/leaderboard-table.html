@@ -1,6 +1,6 @@
 {% macro leaderboard_table(leadersData) %}
 
-<div class="leaderboard-table-wrapper loader" data-loading-text='Loading...'>
+<div class="leaderboard-table-wrapper" data-loading-text='Loading...'>
 
   <table class="leaderboard-table">
     <tr class="leaderboard-table__header-row">
@@ -17,7 +17,10 @@
 
     {% for leader in leadersData %}
     <tr class="leaderboard-table__row">
-      <td class="leaderboard-table__td leaderboard-table__td_rank">{{leader.rank}}</td>
+      <td
+        class="leaderboard-table__td leaderboard-table__td_rank {{'leaderboard-table__td_rank-first' if leader.rank == '1'}} {{'leaderboard-table__td_rank-second' if leader.rank == '2'}} {{'leaderboard-table__td_rank-third' if leader.rank == '3'}}">
+        {{leader.rank}}
+      </td>
       <td class="leaderboard-table__td leaderboard-table__td_player">{{leader.player}}</td>
       <td class="leaderboard-table__td">1000</td>
       <td class="leaderboard-table__td">1000</td>
