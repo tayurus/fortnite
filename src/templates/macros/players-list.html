@@ -2,24 +2,30 @@
 
 {% macro players_list(playersList, class) %}
 
-  <section class="players-list">
+  <div class="players-list__wrapper">
+
+    <section class="players-list">
 
 
-    <h2 class="players-list__title">
-      <span>MOST DECORATED PLAYERS</span>
-    </h2>
+      <h2 class="players-list__title">
+        <span>MOST DECORATED PLAYERS</span>
+      </h2>
 
 
-    <div class="players-list__items">
+      <div class="players-list__items">
 
-      {% for player in playersList %}
+        {% for player in playersList %}
 
-        {{player_card(player)}}
+          {{player_card(player)}}
 
-      {% endfor %}
+        {% endfor %}
 
-    </div>
+      </div>
 
-  </section>
+    </section>
+
+  </div>
+
+
 
 {% endmacro %}
