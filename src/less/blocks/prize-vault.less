@@ -1,0 +1,72 @@
+.prize-vault__wrapper {
+  padding: 0 15px;
+}
+
+.prize-vault {
+  max-width: 1381px;
+  margin: 100px auto;
+  padding-left: 260px;
+  position: relative;
+  display: flex;
+  border: 3px solid #c48206;
+  border-radius: 5px;
+
+  @media (max-width: 992px) {
+    flex-direction: column-reverse;
+    border: none;
+    padding: 0;
+    justify-content: center;
+    margin: 25px auto;
+  }
+
+  &__left {
+    max-width: 577px;
+    width: 100%;
+    background: url('./../images/prize-vault/label.png') no-repeat left center / cover;
+
+    position: absolute;
+    height: 100%;
+    left: 0;
+
+    @media (max-width: 992px) {
+      position: static;
+      height: 296px;
+      max-width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      position: static;
+      height: 296px;
+      max-width: 100%;
+      background: url('../images/prize-vault/label.png') no-repeat left top / 130%
+    }
+
+  }
+
+  &__right {
+    width: 100%;
+    padding: 58px 40px 37px 40px;
+    background-clip: padding-box;
+    background-image: url('./../images/prize-vault/right-bg.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+
+    font-family: "Helvetica Neue";
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+
+    position: relative;
+    padding-left: 17%;
+
+    @media (max-width: 1190px) {
+      font-size: 22px;
+    }
+
+    @media (max-width: 992px) {
+      font-size: 25px;
+      background-color: #bb8e21;
+    }
+  }
+}
