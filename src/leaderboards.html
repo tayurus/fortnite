@@ -18,11 +18,7 @@
 
 	{{site_steps()}}
 
-
-	<div class="banner__wrapper">
-		<img src="./images/banner/banner.png" alt="leaderboard" class="banner"/>
-		<div class="banner__text"></div>
-	</div>
+	{% include './templates/partials/banner.html' %}
 
 	{{leaders_statistic('daily', leaders)}}
 
