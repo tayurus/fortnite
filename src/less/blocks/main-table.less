@@ -7,6 +7,15 @@
   &_small {
     max-width: 527px;
     width: 100%;
+
+    @media (max-width: 1170px) {
+      max-width: 410px;
+    }
+
+    @media (max-width: 992px) {
+      max-width: 100%;
+    }
+
   }
 
   &__tables-row {
@@ -14,6 +23,12 @@
     justify-content: space-around;
     position: relative;
     padding-bottom: 30px;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
   }
 
   &__title {
@@ -57,10 +72,20 @@
     z-index: 1;
     border-collapse: collapse;
     font-family: "Helvetica Neue";
+
+    @media (max-width: 992px) {
+      max-height: 500px;
+      height: 60vh;
+      overflow-y: auto;
+    }
   }
 
   &__header-row {
     background-image: linear-gradient(56deg, rgba(95, 197, 255, .35) 0%, rgba(146, 66, 255, .35) 100%);
+
+    @media (max-width: 992px){
+      display: none !important;
+    }
   }
 
   &__row {
@@ -76,6 +101,10 @@
 
     &:last-child .main-table__td {
       border-bottom: none !important;
+
+      @media (max-width: 992px) {
+        border-bottom: 1px solid #eee !important;
+      }
     }
   }
 
@@ -128,39 +157,37 @@
       color: #99a5bd;
       padding-left: 15px;
       position: relative;
+
+      @media (max-width: 992px){
+        color: #f7931d !important;
+      }
     }
 
-    &_down:before {
-      position: absolute;
+    &_down:after {
       content: '';
       width: 16px;
       height: 17px;
-      left: 50%;
+      display: inline-block;
       background: url('./../images/main-table/down.svg') no-repeat center / contain;
-      top: 50%;
-      transform: translateY(-50%);
+      margin-left: 5px;
     }
 
-    &_up:before {
-      position: absolute;
+    &_up:after {
       content: '';
       width: 16px;
       height: 17px;
-      left: 50%;
+      display: inline-block;
       background: url('./../images/main-table/up.svg') no-repeat center / contain;
-      top: 50%;
-      transform: translateY(-50%);
+      margin-left: 5px;
     }
 
-    &_equal:before {
-      position: absolute;
+    &_equal:after {
       content: '';
       width: 17px;
       height: 16px;
-      left: 55%;
       background: url('./../images/main-table/equal.svg') no-repeat center / contain;
-      top: 48%;
-      transform: translateY(-50%);
+      display: inline-block;
+      margin-left: 5px;
     }
 
     &_country {
@@ -168,6 +195,10 @@
       background-size: 30px;
       background-repeat: no-repeat;
       background-position: center;
+
+      @media (max-width: 992px) {
+        background-position: 52%;
+      }
     }
 
     &_name {
@@ -209,4 +240,58 @@
       padding-left: 10px;
     }
   }
+
+
+  /*!!!!!!!!!!!!!! RESPONSIVE !!!!!!!!!!!!!!!!*/
+  @media (max-width: 992px) {
+
+  	/* Force table to not be like tables anymore */
+  	table, thead, tbody, th, tr {
+  		display: block;
+  	}
+
+  	/* Hide table headers (but not display: none;, for accessibility) */
+  	thead tr {
+  		position: absolute;
+  		top: -9999px;
+  		left: -9999px;
+  	}
+
+  	tr { border: 1px solid #ccc; }
+
+  	td {
+  		display: flex;
+      align-items: center;
+  		border: none;
+  		border-bottom: 1px solid #eee;
+  		position: relative;
+  		padding-left: 50%;
+      max-width: 100%;
+      background-color: #36324d;
+      font-size: 16px;
+      font-weight: 500;
+      color: #99a5bd;
+  	}
+
+  	td:before {
+  		/* Now like a table header */
+  		position: absolute;
+  		/* Top/left values mimic padding */
+  		top: 14px;
+  		left: 6px;
+  		width: 45%;
+  		padding-right: 10px;
+  		white-space: nowrap;
+  	}
+
+    #top10Champions {
+      td:nth-of-type(1):before { content: "Rank"; }
+    	td:nth-of-type(2):before { content: "Country"; }
+    	td:nth-of-type(3):before { content: "Name"; }
+    	td:nth-of-type(4):before { content: "Center Name"; }
+    	td:nth-of-type(5):before { content: "Points"; }
+    }
+
+  }
+
 }
